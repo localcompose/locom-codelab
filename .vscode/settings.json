@@ -1,0 +1,9 @@
+{
+  "window.title": "${folderName} • ${dirty}${activeEditorShort}",
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#2399EA", // locom sky
+    "titleBar.activeForeground": "#ffffff",
+    "titleBar.inactiveBackground": "#00B0D5", // locom ocean
+    "titleBar.inactiveForeground": "#ffffff99"
+  }
+}

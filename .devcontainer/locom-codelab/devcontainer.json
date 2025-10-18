@@ -1,0 +1,41 @@
+{
+  "name": "locom-codelab",
+	"build": {
+		"context": ".",
+		"dockerfile": "Dockerfile"
+	},
+  "mounts": [
+    "source=gh-config,target=/home/vscode/.config/gh,type=volume"
+  ],
+  "remoteUser": "vscode",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker": {
+      "moby": false
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "installDirectlyFromGitHubRelease": true,
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers-extra/features/mkdocs:2": {
+      "version": "latest",
+      "plugins": "mkdocs-material pymdown-extensions mkdocstrings[crystal,python] mkdocs-monorepo-plugin mkdocs-pdf-export-plugin mkdocs-awesome-pages-plugin"
+    },
+    "ghcr.io/devcontainers/features/go:1": {
+      "version": "latest"
+    },
+    "ghcr.io/guiyomh/features/goreleaser:0": {
+      "version": "latest"
+    },
+    "ghcr.io/dhoeric/features/act:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "mhutchie.git-graph",
+        "GitHub.vscode-github-actions",
+        "golang.go",
+        "hbenl.vscode-test-explorer"
+      ]
+    }
+  }
+}
